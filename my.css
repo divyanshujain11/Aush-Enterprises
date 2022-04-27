@@ -30,6 +30,9 @@ header{
     box-shadow: 2px 0 3px grey;
     text-align: center;
 }
+.nav-left1{
+    display: none;
+}
 .nav1-left{
     display: flex;
     justify-content: space-between;
@@ -575,101 +578,70 @@ footer h1{
 
 @media only screen and (max-width:769px){
     .img-slider{
-        height: 50vh;
+        height: 30vh;
     }
     .img-slider .navigation{
         display: none;
     }
     .prev,.next{
-        top:17%;
+        top:25%;
     }
     .btn1 .fa{
         font-size: 25px;
     }
     header{
-        height: 75vh;
+        height: 70vh;
+        margin-bottom: 60px;
     }
     .slider-box{
         margin-top: 100px;
         height: 30vh;
     }
-
-    #sidenav{
-        display: block;
+    .nav4{
+        height: 55vh;    
     }
-    #m-menu{
-        display: block;
-        position: fixed;
-        top: 60%;
-        right: 0;
-        transform: translate(0%,-50%);
-        z-index: 99;
-        background-color: var(--primary);
-        color: #Fff;
-        font-size: 2rem;
-        padding: 20px 10px;
-        animation: animate 5s ease infinate;
-    }
-    @keyframes animate {
-                0%{
-                    background-color: var(--secondary);
-                }
-                100%{
-                    background-color: var(--primary);
-                }
-    }
-    #sidenav{
-        width: 0px;
-        height: 100vh;
+    #side-nav{
         position: fixed;
         top: 0;
-        left: 0;
+        right: -250px;
+        background:var(--primary) ;
         z-index: 3;
-        background-color:var(--light);
-        display: block;
+        height: 100vh;
+        width: 250px;
+        transition: 0.5s;
         overflow-y: scroll;
-        transition: 0.5s ease-in-out;
-    }
-    #sidenav ul{
-        list-style: none;
 
     }
-    #sidenav ul li{
-        display:block;
-        position: relative;
-        z-index: 99;
-        margin: 5px 20px;
+    #side-nav ul li{
+        list-style: none;
+        margin: 50px 20px;
     }
-    #sidenav ul li a{
+    #side-nav ul li a{
+        color: #fff;
         text-decoration: none;
-        color: #fff;
-        display: block;
-        font-size: 20px;
-        padding: 10px 20px;
+        cursor: pointer;
     }
-    #sidenav ul li a:hover{
-        color: var(--primary);
-    
-    }
-    #sidenav ul li i{
-        color: #fff;
-        margin: 0px 5px;
-    }
-    #sidenav ul ul{
+    #menu{
+        width: 50px;
+        height: 50px;
+        background: var(--primary);
+        text-align: center;
         position: absolute;
-        top: 70px;
-        left: 0;
-        display: none;
+        right: 0px;
+        top: 0px;
+        border-radius: 3px;
+        z-index: 3;
+        cursor: pointer;
+        
     }
-    #sidenav ul ul li{
-        border-bottom: 1px solid #fff;
+    #menu img{
+        width: 20px;
+        margin-top: 15px;
     }
-    #sidenavl ul ul li a{
-        font-size: 15px;
-    }
-    #sidenav ul li:hover>ul{
-        display: block;
-        overflow-y: scroll;
+
+    .nav-left1{
+        display:flex;
+        padding-left: 16px
     }
 
     .nav1{
@@ -678,10 +650,16 @@ footer h1{
         height: 50px;
     }
     .nav1-left{
-        margin-bottom: 25px;
-    }
-    .nav1-left marquee{
+        display: none;
         width: 100%;
+    }
+    .nav-left1 h1{
+        font-size: 25px;
+        font-family: 'Oswald', sans-serif;
+    }
+    .nav-left1 h1 span{
+        font-size: 25px;
+        color: var(--primary);
     }
     .nav1-right i{
        display: none;
