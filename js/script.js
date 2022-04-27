@@ -69,21 +69,24 @@ function next(){
     slides[x].classList.add('active');
     btns[x].classList.add('active');
 }
+//product
 
-var sidenav=document.getElementById('sidenav');
-var menubar=document.getElementById('m-menu');
-sidenav.style.width="0px";
-menubar.onclick=function(){
-    if(sidenav.style.width=="0px")sidenav.style.width="250px";
-    else sidenav.style.width="0px";
-}
 
-var sidenav=document.getElementById('product');
-var menubar=document.getElementById('product-menu');
-sidenav.style.height="0px";
-menubar.onclick=function(){
-    if(sidenav.style.width=="0px")sidenav.style.width="250px";
-    else sidenav.style.width="0px";
+//burger
+
+var sidenav = document.getElementById("side-nav");
+var menubtn = document.getElementById("menu-btn");
+var menu = document.getElementById("menu");
+sidenav.style.right="-250px";
+menubtn.onclick = function(){
+    if(sidenav.style.right=="-250px"){
+        sidenav.style.right="0";
+        menu.src="image/close.png";
+    }
+    else{
+        sidenav.style.right="-250px";
+        menu.src="image/menu.png";
+    }
 }
 
 // Form 
